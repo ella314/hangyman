@@ -2,13 +2,13 @@
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /main
 
 # Copy the application files into the container
-COPY . /app
+COPY . /main
 
 # Install only the necessary dependencies for Flask
 RUN pip install flask
 
 # Command to run the application using the Flask development server
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
